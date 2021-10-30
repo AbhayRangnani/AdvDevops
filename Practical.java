@@ -1,7 +1,7 @@
 import static java.lang.Math.pow;
 import java.util.*;
 
-class Practical
+public class Practical
 {
 
 static double sum(int x, int n)

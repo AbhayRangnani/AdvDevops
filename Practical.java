@@ -1,28 +1,26 @@
-import static java.lang.Math.pow;
 import java.util.*;
-
 public class Practical
 {
-
-static double sum(int x, int n)
-{
-	double i, total = 1.0;
-	for (i = 1; i <= n; i++)
-		total = total +
-				(Math.pow(x, i) / i);
-
-	return total;
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+		String n= args[1];
+		String value1=args[0];
+		double sum=1;
+		for(int i=2;i<=Integer.parseInt(n);i++)
+		{
+		    double check=(double)Math.pow(Integer.parseInt(value1),i);
+		    double val=fact(i);
+		    sum+=(check/val);
+		}
+		System.out.println(sum);
+	}
+	public static double fact(double n)
+	{
+	     double value=1;
+	    for(int i=1;i<=n;i++)
+	    {
+	        value=value*(double)i;
+	    }
+	    return value;
+	}
 }
-
-public static void main(String[] args)
-{
-	Scanner sc= new Scanner(System.in);  
-	System.out.print("Enter the base of the series:  ");  
-	int x= sc.nextInt();
-	System.out.print("Enter the number of terms:  ");  
-	int n= sc.nextInt();
-	System.out.printf("%.2f", sum(x, n));
-}
-}
-
-
